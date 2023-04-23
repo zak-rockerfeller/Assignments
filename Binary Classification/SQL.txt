@@ -1,0 +1,6 @@
+SELECT COALESCE(d1.air_pollution, d2.air_pollution) AS air_pollution, 
+       COALESCE(d1.alcohol_consumption, d2.alcohol_consumption) AS alcohol_consumption, 
+       COALESCE(d1.smoking, d2.smoking) AS smoking
+FROM dataset1 d1
+FULL OUTER JOIN dataset2 d2
+ON d1.air_pollution = d2.air_pollution AND d1.alcohol_consumption = d2.alcohol_consumption AND d1.smoking = d2.smoking;
